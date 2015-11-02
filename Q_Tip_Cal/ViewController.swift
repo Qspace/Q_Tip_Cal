@@ -34,10 +34,8 @@ class ViewController: UIViewController {
         
         //show keyboard whenever app start
         billField.becomeFirstResponder()
-        print("viewDidload")
         if NSUserDefaults.standardUserDefaults().objectForKey("DefaultTipPerCent") != nil {
             tipIndex = NSUserDefaults.standardUserDefaults().objectForKey("DefaultTipPerCent") as! Int
-            print("Tip Index \(tipIndex)")
         }
         else {
             //Reset value for all of the labels
@@ -53,7 +51,6 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        print("View did appear")
         tipPercentSegment.selectedSegmentIndex = tipIndex
     }
     
@@ -71,8 +68,6 @@ class ViewController: UIViewController {
         saveButton.enabled = false
         let tipPercentArr = [0.18, 0.20, 0.22]
         let tipPercent = tipPercentArr[tipPercentSegment.selectedSegmentIndex]
-        print("Tip percent: \(tipPercent)")
-        print(billField.text!)
         if billField.text! != "" {
             billAmount = Double(billField.text!)!
             saveButton.enabled = true
@@ -99,9 +94,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func saveBill(sender: AnyObject) {
-        print("saveBill")
         let date: NSDate = NSDate()
-        print("\(date)  \(billAmount) \(total) ")
         tableData.append(["date": "\(date)", "tip": "\(tip)", "total": "\(total)"])
         NSUserDefaults.standardUserDefaults().setObject(tableData, forKey: "billList")
         
