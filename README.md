@@ -13,7 +13,8 @@ Completed:
 * [] Optional: Using locale-specific currency and currency thousands separators.
 * [*] Optional: Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
-* [] Additional: Add save bill feature for save and show the bill on the table view
-![Video Walkthrough](name of your gif Q_tip.gif) create by Linecap
+* [*] Additional: Add save bill feature for save and show the bill on the table view
+![Video Walkthrough](Q_tip.gif)
+Gif file is created using Linecap
 
 Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
