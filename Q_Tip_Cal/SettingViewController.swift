@@ -26,10 +26,18 @@ class SettingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+  override func viewWillAppear(animated: Bool) {
+    tipIndex = NSUserDefaults.standardUserDefaults().integerForKey("DefaultTipPerCent")
+    tipPercentDefaultSegment.selectedSegmentIndex = tipIndex
+
+  }
     
     @IBAction func defaultTipValueChanged(sender: AnyObject) {
         tipIndex = tipPercentDefaultSegment.selectedSegmentIndex
-        NSUserDefaults.standardUserDefaults().setObject(tipIndex, forKey: "DefaultTipPerCent")
+//        NSUserDefaults.standardUserDefaults().setObject(tipIndex, forKey: "DefaultTipPerCent")
+      NSUserDefaults.standardUserDefaults().setInteger(tipIndex, forKey: "DefaultTipPerCent")
+      NSUserDefaults.standardUserDefaults().synchronize()
     }
 
     /*

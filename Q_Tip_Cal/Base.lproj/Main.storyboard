@@ -270,6 +270,7 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="H6y-4A-9Ng" appends="YES" id="nS5-7R-SeD"/>
+                            <outletCollection property="gestureRecognizers" destination="WUp-jk-ftz" appends="YES" id="4Sc-Jj-Bhp"/>
                         </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -287,6 +288,7 @@
                         <action selector="onTap:" destination="BYZ-38-t0r" id="S9R-b8-YAa"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="WUp-jk-ftz"/>
             </objects>
             <point key="canvasLocation" x="245" y="305"/>
         </scene>
